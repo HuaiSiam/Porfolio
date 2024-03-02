@@ -10,6 +10,9 @@ html body{
 .main-container{
   max-width: 1920px;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
 }
 
 .filter-white{
@@ -25,9 +28,17 @@ html body{
   color: rgb(226 232 240);
 }
 
+@media (min-width: 640px){
+  .main-container{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
 @media (min-width: 1024px){
   .main-container{
     padding-left: 6rem;
     padding-right: 6rem;
+    padding-top: 0;
   }
 }

@@ -28,7 +28,7 @@ function Banner(){
                 </ul>
             </div>
 
-            <div className="flex">
+            <div className="flex pt-16">
                 <a href="https://github.com/HuaiSiam" target="_blank" className="mr-3">
                     <img src="/img/github.svg" alt="github" className="w-6 h-6 filter-white" />
                 </a>
