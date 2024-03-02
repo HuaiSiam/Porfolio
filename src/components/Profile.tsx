@@ -1,8 +1,4 @@
-import { useState } from "react";
-
-function Banner(){
-    const [isActive, setisActive] = useState('about');
-
+const Profile = (props:any) =>{
     return(
         <>
             <div>
@@ -14,13 +10,13 @@ function Banner(){
 
                 <ul className="mt-16 w-max profile-sidebar">
                     <li>
-                        <a className={`group flex items-center py-3 sidebar-item ${isActive == 'about' && 'active'}`} href="#about" onClick={() => setisActive('about')}>
+                        <a className={`group flex items-center py-3 sidebar-item ${props.isActive == 'about' && 'active'}`} href="#about" onClick={() => props.parentCallback('about')}>
                             <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
                             <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">About</span>
                         </a>
                     </li>
                     <li>
-                        <a className={`group flex items-center py-3 sidebar-item ${isActive == 'experience' && 'active'}`} href="#experience" onClick={() => setisActive('experience')}>
+                        <a className={`group flex items-center py-3 sidebar-item ${props.isActive == 'experience' && 'active'}`} href="#experience" onClick={() => props.parentCallback('experience')}>
                             <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
                             <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">experience</span>
                         </a>
@@ -43,4 +39,4 @@ function Banner(){
     )
 }
 
-export default Banner;
+export default Profile;
